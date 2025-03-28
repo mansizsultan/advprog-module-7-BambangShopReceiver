@@ -67,7 +67,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [ ] Commit: `Implement add function in Notification repository.`
     -   [ ] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [ ] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
--   **STAGE 3: Implement services and controllers**
+-   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
     -   [ ] Commit: `Implement subscribe function in Notification controller.`
@@ -95,3 +95,5 @@ In this tutorial, `RwLock<>` is used to allow multiple threads to read the notif
 Rust enforces strict ownership and borrowing rules to ensure memory safety, which is why it doesn’t allow direct mutation of static variables without a safe synchronization mechanism. In Java, static variables can be mutated directly, but Rust’s memory safety guarantees prevent this to avoid race conditions and data corruption. The use of lazy_static ensures that the static variables are initialized safely, and synchronization mechanisms like RwLock<> or Mutex<> are needed to mutate them in a thread-safe way.
 
 #### Reflection Subscriber-2
+
+
