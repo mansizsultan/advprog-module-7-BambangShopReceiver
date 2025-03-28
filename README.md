@@ -96,4 +96,15 @@ Rust enforces strict ownership and borrowing rules to ensure memory safety, whic
 
 #### Reflection Subscriber-2
 
+1. Have you explored things outside of the steps in the tutorial, for example: `src/lib.rs`? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+
+I have primarily focused on the steps within the tutorial, but I did briefly explore src/lib.rs to understand the broader structure of the application. I learned how different components are connected in the codebase, particularly the interconnections between services, controllers, and models. Understanding the modular structure helped in organizing my own implementations and how to interact with other parts of the codebase. I didn’t explore deeply outside of the tutorial steps because I wanted to ensure I completed the necessary tasks as instructed.
+
+2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+
+The Observer pattern significantly simplifies adding more subscribers to the system. Since the Publisher only needs to notify all subscribed receivers, adding new subscribers is as simple as registering them with the Publisher. This decouples the Publisher from individual subscribers, making the system scalable. Additionally, spawning multiple instances of the Main app is straightforward because the system is designed to handle multiple receivers with unique URLs. Each instance of the Receiver app will be able to receive notifications, making it easy to add more instances as needed.
+
+3. Have you tried to make your own Tests, or enhance documentation on your **Postman collection**? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+I have used Postman extensively to test the API endpoints, and I found it to be incredibly useful in validating the functionality of the notification system. I’ve also added custom tests in Postman to simulate different scenarios, such as subscribing to a product type and checking if the notifications are properly received by the Receiver app. This testing process is invaluable for ensuring that the notification system works as expected. Enhancing the documentation in Postman also helps streamline communication within the team, especially when sharing API specifications.
 
